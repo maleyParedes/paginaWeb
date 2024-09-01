@@ -4,3 +4,36 @@
     box-sizing: border-box;
 }
 
+body{
+    display: grid;
+}
+
+#fotoMiguel{
+    height: 25vh;
+    border: gray;
+    border-style: dashed;
+    box-shadow: 2px 2px 15px gray;
+    grid-area: imagen_personal;
+}
+
+h1{
+    grid-area: titulo;
+}
+
+#datos-personales{
+    grid-area: datos_personales;
+}
+
+header{
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "imagen_personal datos_personales"
+    ;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  align-items: center;
+  border: solid salmon;
+}
+
