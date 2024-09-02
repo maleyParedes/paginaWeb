@@ -1,39 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+@media screen and (min-width: 1025px) {
+  body {
     display: grid;
-}
+  }
 
-#fotoMiguel{
-    height: 25vh;
-    border: gray;
-    border-style: dashed;
+  #fotoMiguel {
+    height: 30vh;
     box-shadow: 2px 2px 15px gray;
     grid-area: imagen_personal;
-}
+    border-radius: 40%;
+    margin-left: 50%;
+  }
 
-h1{
+  h1 {
     grid-area: titulo;
-}
+    border: solid;
+  }
 
-#datos-personales{
+  #datos-personales {
     grid-area: datos_personales;
-}
+    text-align: justify;
+    border: solid;
+  }
 
-header{
+  #datos-personales p {
+    font-size: 20px;
+  }
+
+  header {
     display: grid;
+    height: 50dvh;
     grid-template-areas:
-    "titulo titulo"
-    "imagen_personal datos_personales"
-    ;
-  grid-template-rows: 20% 80%;
-  grid-template-columns: 50% 50%;
-  text-align: center;
-  align-items: center;
-  border: solid salmon;
+      "titulo titulo"
+      "imagen_personal datos_personales";
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    align-items: center;
+    border: solid salmon;
+  }
 }
-
