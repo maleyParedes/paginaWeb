@@ -7,41 +7,91 @@
 @media screen and (min-width: 1025px) {
   body {
     display: grid;
+    grid-template-areas: 
+    "aside header header"
+    "aside header header"
+    "aside sect sect"
+    "aside sect sect" 
+    ;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 8vh 10vh 42vh 42vh;
+  }
+
+  aside{
+    grid-area: aside;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    background-color: #2D384B;
   }
 
   #fotoMiguel {
-    height: 30vh;
-    box-shadow: 2px 2px 15px gray;
+    width: 50%;
+    box-shadow: 2px 2px 15px rgb(187, 185, 185);
     grid-area: imagen_personal;
-    border-radius: 40%;
-    margin-left: 50%;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-top: 15px;
   }
 
   h1 {
-    grid-area: titulo;
     border: solid;
   }
 
   #datos-personales {
     grid-area: datos_personales;
     text-align: justify;
-    border: solid;
+    width: 78%;
+    color: aliceblue;
   }
 
-  #datos-personales p {
-    font-size: 20px;
+
+  #contenido{
+    font-size: 14px;
+    text-align: justify;
+    text-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  .divisor{
+    width: 80%;
+    border: solid 1px rgba(128, 128, 128, 0.76);
+    margin: 25px 0;
+    
   }
 
   header {
-    display: grid;
-    height: 50dvh;
-    grid-template-areas:
-      "titulo titulo"
-      "imagen_personal datos_personales";
-    grid-template-rows: 20% 80%;
-    grid-template-columns: 50% 50%;
     text-align: center;
     align-items: center;
-    border: solid salmon;
+    border: solid rgb(247, 5, 235);
+    grid-area: header;
+    display: block;
+  }
+
+  #contenido a{
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+  }
+
+  #logo{
+    width: 20px;
+  }
+
+  #contenido a:hover{
+    text-decoration: underline;
+    color: aquamarine;
+  }
+
+  #titulo-datos{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  section{
+    grid-area: sect;
+    border: solid green;
   }
 }
