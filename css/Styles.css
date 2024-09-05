@@ -14,7 +14,7 @@
     "aside footer footer" 
     ;
     grid-template-columns: 20% 30% 50%;
-    grid-template-rows: 15vh 10vh 140vh 20vh;
+    grid-template-rows: 15vh 10vh auto auto;
   }
 
   header {
@@ -153,6 +153,7 @@
 
   footer{
     grid-area: footer;
+    width: 100%;
   }
   .pie-pag{
     display: flex;
@@ -162,7 +163,167 @@
 }
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "aside aside aside"
+    "sect sect sect"
+    "footer footer footer" 
+    ;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 25vh auto auto auto;
+  }
 
+  header {
+    text-align: center;
+    align-items: center;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #2D384B;
+  }
+
+  .contenedor-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 760px;
+  }
+
+  h1 {
+    font-size: 38px;
+    text-align: justify;
+    text-decoration: underline;
+    color: aliceblue;
+  }
+
+  #logoUdla{
+    background-color: white;
+    width: 70px;
+    border-radius: 50% 50% 0% 0%;
+  }
+
+  h2{
+    text-align: justify;
+    padding: 0 20px;
+    color: aliceblue;
+  }
+
+  aside{
+    grid-area: aside;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 3px 10px;
+    background-color: #2d384bf6;
+    justify-content: space-around;
+  }
+
+  #fotoMiguel {
+    width: 220px;
+    height: 220px;
+    box-shadow: 2px 2px 15px rgb(187, 185, 185);
+    grid-area: imagen_personal;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-right: 160px;
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+  }
+
+  /* #fotoMiguel:hover{
+    transform: scale(1.5);
+  } */
+
+  #datos-personales {
+    grid-area: datos_personales;
+    text-align: justify;
+    width: 380px;
+    height: 130px;
+    color: aliceblue;
+    align-content: center;
+  }
+
+  #contenido{
+    font-size: 12px;
+    text-align: justify;
+    text-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  #contenido:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+  #contenido a{
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+  }
+
+  #contenido a:hover{
+    text-decoration: underline;
+    color: aquamarine;
+  }
+
+  .logo{
+    width: 20px;
+    margin-left: 5px;
+    transform: translateY(3px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .logo:hover{
+    transform: scale(1.1);
+  }
+
+  #logo1{
+    filter: invert(100%);
+  }
+
+  #titulo-datos{
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  #titulo-datos:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  section{
+    grid-area: sect;
+    padding: 30px 40px;
+  }
+
+  h3{
+    margin-bottom: 10px;
+  }
+
+  article{
+    text-align: justify;
+    margin-bottom: 26px;
+  }
+
+  .separador{
+    height: 14px;
+  }
+
+  footer{
+    grid-area: footer;
+    width: 100%;
+  }
+  .pie-pag{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   
 }
 
